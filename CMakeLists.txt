@@ -43,12 +43,18 @@ set(
 add_library(${PROJECT_NAME} STATIC ${SOURCE_FILES})
 add_library(${PROJECT_NAME}-shared SHARED ${SOURCE_FILES})
 
+target_include_directories(${PROJECT_NAME} PUBLIC include)
+target_include_directories(${PROJECT_NAME}-shared PUBLIC include)
+
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME mba CLEAN_DIRECT_OUTPUT 1)
 set_target_properties(${PROJECT_NAME}-shared PROPERTIES OUTPUT_NAME mba CLEAN_DIRECT_OUTPUT 1)
+
 set_property(TARGET ${PROJECT_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON)
 set_property(TARGET ${PROJECT_NAME}-shared PROPERTY POSITION_INDEPENDENT_CODE ON)
 
-target_include_directories(${PROJECT_NAME} PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-    $<INSTALL_INTERFACE:include>
-    PRIVATE src)
+target_include_directories(
+  ${PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+  PRIVATE src
+)
