@@ -57,7 +57,7 @@ uninstall: mktool
 
 clean:
 	$(MKTOOL) -C -libname $(LIBNAME) -libvers $(LIBVERS)
-	rm -f $(ARNAME) src/*.o
+	rm -f $(ARNAME) src/*.o mktool
 
 zip:
 	rm -rf /tmp/$(DISTRO) /tmp/$(DISTRO).zip
