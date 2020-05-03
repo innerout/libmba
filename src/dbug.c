@@ -30,8 +30,8 @@
 #include <execinfo.h>
 #include <dlfcn.h>
 
-#include "mba/path.h"
-#include "mba/text.h"
+#include <path.h>
+#include <text.h>
 
 int
 dbug_stacktrace(void **buf, int off, int n)

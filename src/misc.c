@@ -10,8 +10,8 @@
 #include <unistd.h>
 #endif
 
-#include "mba/msgno.h"
-#include "mba/misc.h"
+#include <msgno.h>
+#include <misc.h>
 
 #ifndef _WIN32
 

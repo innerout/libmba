@@ -24,7 +24,7 @@
 
 #include <stdlib.h>
 
-#include "mba/time.h"
+#include <time.h>
 
 #ifdef _WIN32
 #include <windows.h>

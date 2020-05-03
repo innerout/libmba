@@ -25,9 +25,9 @@
 #include <stdlib.h>
 #include <errno.h>
 
-#include "mba/allocator.h"
-#include "mba/suba.h"
-#include "mba/msgno.h"
+#include <allocator.h>
+#include <suba.h>
+#include <msgno.h>
 
 void *
 allocator_alloc(struct allocator *al, size_t size, int zero)

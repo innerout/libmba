@@ -1,7 +1,7 @@
 # Makefile for libmba
 # Supported flags: -DVARRAY_INIT_SIZE=N -DUSE_WCHAR
 
-MFLAGS     = -g -W1 -Isrc
+MFLAGS     = -g -W1 -Iinclude
 MKTOOL     = ./mktool
 
 prefix     = /usr/local
@@ -57,7 +57,7 @@ uninstall: mktool
 
 clean:
 	$(MKTOOL) -C -libname $(LIBNAME) -libvers $(LIBVERS)
-	rm -f $(ARNAME) src/*.o
+	rm -f $(ARNAME) src/*.o mktool
 
 zip:
 	rm -rf /tmp/$(DISTRO) /tmp/$(DISTRO).zip
