@@ -1,7 +1,7 @@
 # Makefile for libmba
 # Supported flags: -DVARRAY_INIT_SIZE=N -DUSE_WCHAR
 
-MFLAGS     = -g -W1 -Isrc
+MFLAGS     = -g -W1 -Iinclude
 MKTOOL     = ./mktool
 
 prefix     = /usr/local

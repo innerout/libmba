@@ -31,12 +31,12 @@
 #include <limits.h>
 #include <wchar.h>
 
-#include "mba/msgno.h"
-#include "mba/iterator.h"
-#include "mba/allocator.h"
-#include "mba/linkedlist.h"
-#include "mba/cfg.h"
-#include "mba/text.h"
+#include <msgno.h>
+#include <iterator.h>
+#include <allocator.h>
+#include <linkedlist.h>
+#include <cfg.h>
+#include <text.h>
 
 #if USE_WCHAR
 

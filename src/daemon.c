@@ -35,8 +35,8 @@
 #include <sys/file.h>
 #include <fcntl.h>
 
-#include "mba/msgno.h"
-#include "mba/daemon.h"
+#include <msgno.h>
+#include <daemon.h>
 
 FILE *logfp = NULL;
 

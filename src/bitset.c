@@ -25,8 +25,8 @@
 #include <limits.h>
 #include <errno.h>
 
-#include "mba/msgno.h"
-#include "mba/bitset.h"
+#include <msgno.h>
+#include <bitset.h>
 
 #define bitset_elem(ptr,bit) ((unsigned char *)(ptr))[(bit)/CHAR_BIT]
 #define bitset_mask(bit) (1U << ((bit) % CHAR_BIT))

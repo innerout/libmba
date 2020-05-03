@@ -37,11 +37,11 @@
 #include <sys/mman.h>
 #include <sys/wait.h>
 
-#include "mba/svsem.h"
-#include "mba/pool.h"
-#include "mba/varray.h"
-#include "mba/misc.h"
-#include "mba/msgno.h"
+#include <svsem.h>
+#include <pool.h>
+#include <varray.h>
+#include <misc.h>
+#include <msgno.h>
 
 #if defined(_SEM_SEMUN_UNDEFINED) || \
 		(defined(__digital__) && defined(__unix__)) || \

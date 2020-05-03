@@ -37,8 +37,8 @@
 #include <limits.h>
 #include <errno.h>
 
-#include "mba/msgno.h"
-#include "mba/diff.h"
+#include <msgno.h>
+#include <diff.h>
 
 #define FV(k) _v(ctx, (k), 0)
 #define RV(k) _v(ctx, (k), 1)

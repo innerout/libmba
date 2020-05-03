@@ -29,7 +29,7 @@
 #include <stdarg.h>
 #include <errno.h>
 
-#include "mba/msgno.h"
+#include <msgno.h>
 
 #ifndef MSGNO_NUM_LISTS
 #define MSGNO_NUM_LISTS 16
