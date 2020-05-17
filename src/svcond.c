@@ -26,9 +26,9 @@
 #include <string.h>
 #include <errno.h>
 
-#include <svsem.h>
-#include <svcond.h>
-#include <msgno.h>
+#include <mba/svsem.h>
+#include <mba/svcond.h>
+#include <mba/msgno.h>
 
 int
 svcond_destroy(svcond_t *cond)

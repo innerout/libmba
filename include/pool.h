@@ -21,9 +21,9 @@ extern "C" {
 #endif /* LIBMBA_API */
 
 #include <stddef.h>
-#include <stack.h>
-#include <iterator.h>
-#include <allocator.h>
+#include <mba/stack.h>
+#include <mba/iterator.h>
+#include <mba/allocator.h>
 
 #define POOL_SIZE_MAX 2040
 

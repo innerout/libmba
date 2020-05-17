@@ -27,10 +27,10 @@
 #include <ctype.h>
 #include <errno.h>
 
-#include <varray.h>
-#include <stack.h>
-#include <msgno.h>
-#include <eval.h>
+#include <mba/varray.h>
+#include <mba/stack.h>
+#include <mba/msgno.h>
+#include <mba/eval.h>
 
 #if USE_WCHAR
 #define T1PMNF(m,s) PMNF((m), ": %ls", (s))

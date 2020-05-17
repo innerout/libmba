@@ -21,10 +21,10 @@ extern "C" {
 #endif /* LIBMBA_API */
 
 #include <stdio.h>
-#include <iterator.h>
-#include <allocator.h>
-#include <linkedlist.h>
-#include <text.h>
+#include <mba/iterator.h>
+#include <mba/allocator.h>
+#include <mba/linkedlist.h>
+#include <mba/text.h>
 
 struct cfg {
 	struct linkedlist list;

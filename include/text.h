@@ -20,7 +20,7 @@ extern "C" {
 #endif /* WIN32 */
 #endif /* LIBMBA_API */
 
-#include <allocator.h>
+#include <mba/allocator.h>
 
 #if USE_WCHAR
 

@@ -27,9 +27,9 @@
 #include <stdio.h>
 #include <errno.h>
 
-#include <suba.h>
-#include <dbug.h>
-#include <msgno.h>
+#include <mba/suba.h>
+#include <mba/dbug.h>
+#include <mba/msgno.h>
 
 struct cell {
 	size_t size;

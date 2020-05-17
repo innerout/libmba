@@ -28,7 +28,7 @@
 #include <wchar.h>
 #include <string.h>
 
-#include <hexdump.h>
+#include <mba/hexdump.h>
 
 #define HEXBUFSIZ 128
 

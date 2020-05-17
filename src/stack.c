@@ -29,10 +29,10 @@
 #include <errno.h>
 #include <stdio.h>
 
-#include <msgno.h>
-#include <iterator.h>
-#include <allocator.h>
-#include <stack.h>
+#include <mba/msgno.h>
+#include <mba/iterator.h>
+#include <mba/allocator.h>
+#include <mba/stack.h>
 
 #define STACK_INIT_SIZE 0
 

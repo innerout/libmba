@@ -21,7 +21,7 @@ extern "C" {
 #endif /* LIBMBA_API */
 
 #include <stdio.h>
-#include <text.h>
+#include <mba/text.h>
 
 #if USE_WCHAR
 #define csv_row_parse csv_row_parse_wcs

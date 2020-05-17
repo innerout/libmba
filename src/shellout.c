@@ -49,10 +49,10 @@
 #include <sys/time.h>
 #include <signal.h>
 
-#include <msgno.h>
-#include <text.h>
-#include <misc.h>
-#include <shellout.h>
+#include <mba/msgno.h>
+#include <mba/text.h>
+#include <mba/misc.h>
+#include <mba/shellout.h>
 
 #define TERM_PREPARE "\x1b[?1048h\x1b[?1047h\x1b[2J\x1b[H"
 #define TERM_RESTORE "\x1b[?1047l\x1b[?1048l"

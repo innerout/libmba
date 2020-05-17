@@ -20,7 +20,7 @@ extern "C" {
 #endif /* WIN32 */
 #endif /* LIBMBA_API */
 
-#include <iterator.h>
+#include <mba/iterator.h>
 
 LIBMBA_API int bitset_isset(void *ptr, int bit);
 LIBMBA_API int bitset_set(void *ptr, int bit);

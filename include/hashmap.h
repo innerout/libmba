@@ -20,8 +20,8 @@ extern "C" {
 #endif /* WIN32 */
 #endif /* LIBMBA_API */
 
-#include <iterator.h>
-#include <allocator.h>
+#include <mba/iterator.h>
+#include <mba/allocator.h>
 
 #if USE_WCHAR
 #define hash_text hash_wcs

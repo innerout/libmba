@@ -25,10 +25,10 @@ for file in files_full:
 for line in fileinput.input(files_full, inplace = 1):
     if '#include' and '\"mba' in line:
         line = line.replace("\"", "<", 1)
-        line = line.replace("mba/", "")
+        #line = line.replace("mba/", "")
         line = line.replace("\"", ">", 1)
-    elif '#include' and '<mba/':
-        line = line.replace("mba/", "")
+    #elif '#include' and '<mba/':
+    #   line = line.replace("mba/", "")
     sys.stdout.write(line)
 
 

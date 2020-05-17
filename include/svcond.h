@@ -9,8 +9,8 @@
 extern "C" {
 #endif
 
-#include <svsem.h>
-#include <pool.h>
+#include <mba/svsem.h>
+#include <mba/pool.h>
 
 typedef struct {
 	struct pool *sempool;
