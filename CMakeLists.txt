@@ -43,8 +43,8 @@ set(
 add_library(${PROJECT_NAME} STATIC ${SOURCE_FILES})
 add_library(${PROJECT_NAME}-shared SHARED ${SOURCE_FILES})
 
-target_include_directories(${PROJECT_NAME} PUBLIC include)
-target_include_directories(${PROJECT_NAME}-shared PUBLIC include)
+target_include_directories(${PROJECT_NAME} PRIVATE include)
+target_include_directories(${PROJECT_NAME}-shared PRIVATE include)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME mba CLEAN_DIRECT_OUTPUT 1)
 set_target_properties(${PROJECT_NAME}-shared PROPERTIES OUTPUT_NAME mba CLEAN_DIRECT_OUTPUT 1)
@@ -58,3 +58,24 @@ target_include_directories(
   $<INSTALL_INTERFACE:include>
   PRIVATE src
 )
+
+install(
+  TARGETS ${PROJECT_NAME} EXPORT mba
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
+
+install(
+  TARGETS ${PROJECT_NAME}-shared EXPORT mba
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
+
+install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME})
+
+install(EXPORT ${PROJECT_NAME} DESTINATION share/${PROJECT_NAME}/cmake)
+
+
+export(TARGETS ${PROJECT_NAME} FILE ${PROJECT_NAME}.cmake)
