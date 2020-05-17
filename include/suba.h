@@ -21,7 +21,7 @@ extern "C" {
 #endif /* LIBMBA_API */
 
 #include <stddef.h>
-#include <allocator.h>
+#include <mba/allocator.h>
 
 #define SUBA_PTR_SIZE(ptr) ((ptr) ? (*((size_t *)(ptr) - 1)) : 0)
 

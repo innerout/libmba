@@ -28,11 +28,11 @@
 #include <stdio.h>
 #include <wchar.h>
 
-#include <msgno.h>
-#include <iterator.h>
-#include <allocator.h>
-#include <suba.h>
-#include <hashmap.h>
+#include <mba/msgno.h>
+#include <mba/iterator.h>
+#include <mba/allocator.h>
+#include <mba/suba.h>
+#include <mba/hashmap.h>
 
 
 #define HAL(h) ((struct allocator *)((h)->al ? (char *)(h) - (ptrdiff_t)(h)->al : NULL))

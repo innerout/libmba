@@ -20,9 +20,9 @@ extern "C" {
 #endif /* WIN32 */
 #endif /* LIBMBA_API */
 
-#include <iterator.h>
-#include <allocator.h>
-#include <hashmap.h> /* cmp_fn */
+#include <mba/iterator.h>
+#include <mba/allocator.h>
+#include <mba/hashmap.h> /* cmp_fn */
 
 #define CACHE_SIZE 2
 

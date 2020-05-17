@@ -32,8 +32,8 @@
 #include <wchar.h>
 #include <wctype.h>
 
-#include <msgno.h>
-#include <text.h>
+#include <mba/msgno.h>
+#include <mba/text.h>
 
 int
 str_length(const unsigned char *src, const unsigned char *slim)

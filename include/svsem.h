@@ -11,8 +11,8 @@ extern "C" {
 #include <sys/types.h>
 #include <sys/sem.h> /* for SEM_UNDO */
 #include <fcntl.h>
-#include <pool.h>
-#include <varray.h>
+#include <mba/pool.h>
+#include <mba/varray.h>
 
 #define O_UNDO 0x80000
 

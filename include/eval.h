@@ -20,7 +20,7 @@ extern "C" {
 #endif /* WIN32 */
 #endif /* LIBMBA_API */
 
-#include <text.h>
+#include <mba/text.h>
 
 struct eval;
 

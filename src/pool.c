@@ -26,12 +26,12 @@
 #include <errno.h>
 #include <stdio.h>
 
-#include <msgno.h>
-#include <allocator.h>
-#include <iterator.h>
-#include <stack.h>
-#include <bitset.h>
-#include <pool.h>
+#include <mba/msgno.h>
+#include <mba/allocator.h>
+#include <mba/iterator.h>
+#include <mba/stack.h>
+#include <mba/bitset.h>
+#include <mba/pool.h>
 
 int
 pool_create(struct pool *p,

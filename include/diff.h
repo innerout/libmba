@@ -20,8 +20,8 @@ extern "C" {
 #endif /* WIN32 */
 #endif /* LIBMBA_API */
 
-#include <varray.h>
-#include <hashmap.h> /* cmp_fn */
+#include <mba/varray.h>
+#include <mba/hashmap.h> /* cmp_fn */
 
 typedef const void *(*idx_fn)(const void *s, int idx, void *context);
 

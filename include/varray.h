@@ -21,8 +21,8 @@ extern "C" {
 #endif /* LIBMBA_API */
 
 #include <stddef.h>
-#include <allocator.h>
-#include <iterator.h>
+#include <mba/allocator.h>
+#include <mba/iterator.h>
 
 /*
 0  1      32768

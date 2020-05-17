@@ -25,7 +25,7 @@
 #include <stdlib.h>
 #include <errno.h>
 
-#include <msgno.h>
+#include <mba/msgno.h>
 
 #define ST_START     1
 #define ST_SEPARATOR 2

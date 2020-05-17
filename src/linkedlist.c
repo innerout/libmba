@@ -28,10 +28,10 @@
 #include <errno.h>
 #include <stdio.h>
 
-#include <msgno.h>
-#include <iterator.h>
-#include <allocator.h>
-#include <linkedlist.h>
+#include <mba/msgno.h>
+#include <mba/iterator.h>
+#include <mba/allocator.h>
+#include <mba/linkedlist.h>
 
 void
 linkedlist_print(struct linkedlist *l)

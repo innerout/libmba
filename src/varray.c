@@ -26,9 +26,9 @@
 #include <string.h>
 #include <errno.h>
 
-#include <iterator.h>
-#include <varray.h>
-#include <msgno.h>
+#include <mba/iterator.h>
+#include <mba/varray.h>
+#include <mba/msgno.h>
 
 #define VAAL(va) ((struct allocator *)((va)->al ? (char *)(va) - (ptrdiff_t)(va)->al : NULL))
 #define BINSIZ(i) ((i) ? 1 << ((i) + (VARRAY_INIT_SIZE - 1)) : (1 << VARRAY_INIT_SIZE))
