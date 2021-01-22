@@ -2,13 +2,25 @@ cmake_minimum_required(VERSION 3.11)
 project(mba VERSION 0.9.1 LANGUAGES C)
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+option(BUILD_SHARED_LIBS
+       "Build shared libraries (.dll/.so) instead of static ones (.lib/.a)" OFF)
+
+# Set a default build type if none was specified
+set(default_build_type "Release")
+if(EXISTS "${CMAKE_SOURCE_DIR}/.git")
+  set(default_build_type "Debug")
+endif()
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
-  set(DEFAULT_BUILD_TYPE "Debug")
-  message(STATUS "Setting build type to '${DEFAULT_BUILD_TYPE}' as none was specified.")
-  set(CMAKE_BUILD_TYPE "${DEFAULT_BUILD_TYPE}" CACHE STRING "Choose the type of build." FORCE)
+  message(
+    STATUS
+      "Setting build type to '${default_build_type}' as none was specified.")
+  set(CMAKE_BUILD_TYPE
+      "${default_build_type}"
+      CACHE STRING "Choose the type of build." FORCE)
   # Set the possible values of build type for cmake-gui
-  set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
+  set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release"
+                                               "MinSizeRel" "RelWithDebInfo")
 endif()
 
 include(GNUInstallDirs)
@@ -40,17 +52,10 @@ set(
   src/varray.c
 )
 
-add_library(${PROJECT_NAME} STATIC ${SOURCE_FILES})
-add_library(${PROJECT_NAME}-shared SHARED ${SOURCE_FILES})
-
+add_library(${PROJECT_NAME} ${SOURCE_FILES})
 target_include_directories(${PROJECT_NAME} PRIVATE include)
-target_include_directories(${PROJECT_NAME}-shared PRIVATE include)
-
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME mba CLEAN_DIRECT_OUTPUT 1)
-set_target_properties(${PROJECT_NAME}-shared PROPERTIES OUTPUT_NAME mba CLEAN_DIRECT_OUTPUT 1)
-
 set_property(TARGET ${PROJECT_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON)
-set_property(TARGET ${PROJECT_NAME}-shared PROPERTY POSITION_INDEPENDENT_CODE ON)
 
 target_include_directories(
   ${PROJECT_NAME} PUBLIC
@@ -61,13 +66,6 @@ target_include_directories(
 
 install(
   TARGETS ${PROJECT_NAME} EXPORT mba
-  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)
-
-install(
-  TARGETS ${PROJECT_NAME}-shared EXPORT mba
   ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
   LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
