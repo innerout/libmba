@@ -34,6 +34,8 @@
 
 #include <mba/msgno.h>
 #include <mba/text.h>
+#include <bits/types/mbstate_t.h>
+#include <mba/allocator.h>
 
 int
 str_length(const unsigned char *src, const unsigned char *slim)

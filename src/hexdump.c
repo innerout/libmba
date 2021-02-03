@@ -22,11 +22,8 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
-#include <wchar.h>
-#include <string.h>
 
 #include <mba/hexdump.h>
 

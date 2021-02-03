@@ -22,7 +22,6 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */ 
 
-#include <stdlib.h>
 #include <string.h>
 #include <limits.h>
 #include <assert.h>

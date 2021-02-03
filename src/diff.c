@@ -39,6 +39,8 @@
 
 #include <mba/msgno.h>
 #include <mba/diff.h>
+#include <mba/hashmap.h>
+#include <mba/varray.h>
 
 #define FV(k) _v(ctx, (k), 0)
 #define RV(k) _v(ctx, (k), 1)

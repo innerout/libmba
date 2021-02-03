@@ -22,7 +22,6 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -37,6 +36,7 @@
 #include <mba/linkedlist.h>
 #include <mba/cfg.h>
 #include <mba/text.h>
+#include <bits/types/mbstate_t.h>
 
 #if USE_WCHAR
 

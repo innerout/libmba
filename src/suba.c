@@ -22,13 +22,12 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#include <stdlib.h>
+#include <stddef.h>
 #include <string.h>
 #include <stdio.h>
 #include <errno.h>
 
 #include <mba/suba.h>
-#include <mba/dbug.h>
 #include <mba/msgno.h>
 
 struct cell {
