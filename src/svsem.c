@@ -22,25 +22,20 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
+#include <stddef.h>
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
 #include <stdarg.h>
 #include <errno.h>
 
 #include <fcntl.h>
 #include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
 #include <sys/ipc.h>
 #include <sys/sem.h>
-#include <sys/mman.h>
-#include <sys/wait.h>
 
 #include <mba/svsem.h>
 #include <mba/pool.h>
 #include <mba/varray.h>
-#include <mba/misc.h>
 #include <mba/msgno.h>
 
 #if defined(_SEM_SEMUN_UNDEFINED) || \

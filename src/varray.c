@@ -21,8 +21,7 @@
  * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  * OTHER DEALINGS IN THE SOFTWARE.
  */
-
-#include <stdlib.h>
+#include <stddef.h>
 #include <string.h>
 #include <errno.h>
 
@@ -33,8 +32,7 @@
 #define VAAL(va) ((struct allocator *)((va)->al ? (char *)(va) - (ptrdiff_t)(va)->al : NULL))
 #define BINSIZ(i) ((i) ? 1 << ((i) + (VARRAY_INIT_SIZE - 1)) : (1 << VARRAY_INIT_SIZE))
 
-int
-varray_init(struct varray *va, size_t membsize, struct allocator *al)
+	int varray_init(struct varray *va, size_t membsize, struct allocator *al)
 {
 	if (va == NULL || membsize == 0) {
 		PMNO(errno = EINVAL);

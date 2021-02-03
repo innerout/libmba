@@ -22,7 +22,6 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#include <stdlib.h>
 #include <errno.h>
 
 #include <mba/msgno.h>

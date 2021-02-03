@@ -42,11 +42,12 @@
 #include <pty.h>
 #endif
 
+
 #include <termios.h>
 #include <unistd.h>
-#include <sys/types.h>
 #include <sys/wait.h>
-#include <sys/time.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
 #include <signal.h>
 
 #include <mba/msgno.h>

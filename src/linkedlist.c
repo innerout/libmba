@@ -22,7 +22,6 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#include <stdlib.h>
 #include <string.h>
 #include <limits.h>
 #include <errno.h>
@@ -32,9 +31,9 @@
 #include <mba/iterator.h>
 #include <mba/allocator.h>
 #include <mba/linkedlist.h>
+#include <mba/hashmap.h>
 
-void
-linkedlist_print(struct linkedlist *l)
+void linkedlist_print(struct linkedlist *l)
 {
 	struct node *n = l->first;
 	int idx = 0;

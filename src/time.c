@@ -23,6 +23,7 @@
  */
 
 #include <stdlib.h>
+#include <stdint.h>
 
 #include <mba/time.h>
 

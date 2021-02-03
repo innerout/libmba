@@ -65,6 +65,14 @@ target_include_directories(
   PRIVATE src
 )
 
+find_program(iwyu_path NAMES include-what-you-use iwyu iwyu-tool)
+if(iwyu_path)
+  set_property(TARGET ${PROJECT_NAME} PROPERTY C_INCLUDE_WHAT_YOU_USE ""# ${iwyu_path}
+    )
+else()
+  message("Could not find the program include-what-you-use")
+endif()
+
 install(
   TARGETS ${PROJECT_NAME}
   EXPORT ${PROJECT_NAME} DESTINATION share/${PROJECT_NAME}/cmake

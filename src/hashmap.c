@@ -21,17 +21,14 @@
  * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
  * OTHER DEALINGS IN THE SOFTWARE.
  */
-
-#include <stdlib.h>
+#include <bits/types/wint_t.h>
+#include <stddef.h>
 #include <string.h>
 #include <errno.h>
-#include <stdio.h>
-#include <wchar.h>
 
 #include <mba/msgno.h>
 #include <mba/iterator.h>
 #include <mba/allocator.h>
-#include <mba/suba.h>
 #include <mba/hashmap.h>
 
 

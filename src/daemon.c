@@ -22,7 +22,6 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>
 #include <string.h>
@@ -32,7 +31,6 @@
 #include <signal.h>
 #include <unistd.h>
 #include <sys/stat.h>
-#include <sys/file.h>
 #include <fcntl.h>
 
 #include <mba/msgno.h>

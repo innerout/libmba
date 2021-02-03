@@ -26,9 +26,12 @@
 #include <string.h>
 #include <errno.h>
 
+#include <sys/sem.h>
+
 #include <mba/svsem.h>
 #include <mba/svcond.h>
 #include <mba/msgno.h>
+#include <mba/pool.h>
 
 int
 svcond_destroy(svcond_t *cond)
@@ -73,7 +76,7 @@ svcond_create(svcond_t *cond, struct pool *sempool)
 		return -1;
 	}
 
-	memset(cond, sizeof *cond, 0);
+	memset(cond, 0, sizeof *cond);
 	cond->sempool = sempool;
 
 	if ((cond->blocked_lock = pool_get(sempool)) == NULL ||

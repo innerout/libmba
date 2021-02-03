@@ -24,13 +24,13 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
 #include <errno.h>
 
 #include <mba/varray.h>
 #include <mba/stack.h>
 #include <mba/msgno.h>
 #include <mba/eval.h>
+#include <mba/text.h>
 
 #if USE_WCHAR
 #define T1PMNF(m,s) PMNF((m), ": %ls", (s))
@@ -50,7 +50,7 @@
 #define TOK_TYPE_RIGHTP  10
 #define TOK_TYPE_VALUE   11
 
-static const tchar *ops = (const tchar *)_T("0e|&^+-*/()");
+	static const tchar *ops = (const tchar *)_T("0e|&^+-*/()");
 
 struct eval {
 	int err;
