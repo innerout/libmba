@@ -36,7 +36,6 @@
 #include <mba/linkedlist.h>
 #include <mba/cfg.h>
 #include <mba/text.h>
-#include <bits/types/mbstate_t.h>
 
 #if USE_WCHAR
 
