@@ -22,16 +22,16 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <stddef.h>
 #include <ctype.h>
 #include <errno.h>
-#include <wchar.h>
 #include <wctype.h>
 
 #include <mba/msgno.h>
 #include <mba/csv.h>
+#include <bits/types/wint_t.h>
 
 #define ST_START     1
 #define ST_COLLECT   2

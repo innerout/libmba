@@ -8,11 +8,8 @@
 extern "C" {
 #endif
 
-#include <sys/types.h>
-#include <sys/sem.h> /* for SEM_UNDO */
-#include <fcntl.h>
-#include <mba/pool.h>
 #include <mba/varray.h>
+struct pool;
 
 #define O_UNDO 0x80000
 

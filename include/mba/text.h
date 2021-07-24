@@ -170,8 +170,9 @@ LIBMBA_API int _fputws(const wchar_t *buf, FILE *stream);
 
 #else
 
-#include <string.h>
+#include <stddef.h>
 #include <ctype.h>
+struct allocator;
 
 #define TEOF EOF
 typedef int tint_t;

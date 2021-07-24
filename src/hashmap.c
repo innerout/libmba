@@ -24,13 +24,12 @@
 #include <stddef.h>
 #include <string.h>
 #include <errno.h>
-#include <wchar.h>
 
 #include <mba/msgno.h>
 #include <mba/iterator.h>
 #include <mba/allocator.h>
 #include <mba/hashmap.h>
-
+#include <bits/types/wint_t.h>
 
 #define HAL(h) ((struct allocator *)((h)->al ? (char *)(h) - (ptrdiff_t)(h)->al : NULL))
 

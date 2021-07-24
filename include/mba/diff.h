@@ -22,6 +22,7 @@ extern "C" {
 
 #include <mba/varray.h>
 #include <mba/hashmap.h> /* cmp_fn */
+struct varray;
 
 typedef const void *(*idx_fn)(const void *s, int idx, void *context);
 
