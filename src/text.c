@@ -22,6 +22,7 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
+#include <bits/types/mbstate_t.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>

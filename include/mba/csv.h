@@ -20,6 +20,7 @@ extern "C" {
 #endif /* WIN32 */
 #endif /* LIBMBA_API */
 
+#include <stddef.h>
 #include <stdio.h>
 #include <mba/text.h>
 

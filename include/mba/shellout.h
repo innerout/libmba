@@ -8,8 +8,9 @@
 extern "C" {
 #endif
 
-#include <sys/types.h>
 #include <termios.h>
+#include <sys/types.h>
+#include <stddef.h>
 
 #define SHO_FLAGS_INTERACT 0x0001
 #define SHO_FLAGS_ISATTY   0x0100

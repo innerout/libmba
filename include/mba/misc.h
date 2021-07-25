@@ -7,6 +7,7 @@ extern "C" {
 
 #ifndef _WIN32
 
+#include <stddef.h>
 #include <sys/types.h>
 
 int copen(const char *pathname, int flags, mode_t mode, int *cre);

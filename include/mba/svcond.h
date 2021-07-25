@@ -10,7 +10,8 @@ extern "C" {
 #endif
 
 #include <mba/svsem.h>
-#include <mba/pool.h>
+struct allocator;
+struct pool;
 
 typedef struct {
 	struct pool *sempool;

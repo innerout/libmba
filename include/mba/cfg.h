@@ -25,6 +25,7 @@ extern "C" {
 #include <mba/allocator.h>
 #include <mba/linkedlist.h>
 #include <mba/text.h>
+struct allocator;
 
 struct cfg {
 	struct linkedlist list;

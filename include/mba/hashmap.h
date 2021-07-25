@@ -22,6 +22,7 @@ extern "C" {
 
 #include <mba/iterator.h>
 #include <mba/allocator.h>
+#include <stddef.h>
 
 #if USE_WCHAR
 #define hash_text hash_wcs
@@ -35,8 +36,6 @@ typedef unsigned long (*hash_fn)(const void *object, void *context);
 typedef int (*cmp_fn)(const void *object1, const void *object2, void *context);
 
 extern const int table_sizes[];
-
-struct entry;
 
 struct hashmap {
 	int table_size_index;
