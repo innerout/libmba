@@ -29,6 +29,8 @@ endif()
 
 include(GNUInstallDirs)
 
+add_subdirectory(docs)
+
 set(SOURCE_FILES
     src/allocator.c
     src/bitset.c
