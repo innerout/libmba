@@ -134,7 +134,7 @@ pool_get(struct pool *p)
 		return NULL;
 	}
 
-	if ((n == stack_size(&p->stk))) {
+	if (n == stack_size(&p->stk)) {
 		size_t size = p->size == (size_t)-1 ? n : p->size;
 		/* If p->size is -1 then 'size' is really the index. This is
 		 * only used by svsem.
