@@ -57,7 +57,7 @@ set(SOURCE_FILES
     src/varray.c)
 
 add_library(${PROJECT_NAME} ${SOURCE_FILES})
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -lutil")
+target_link_options(${PROJECT_NAME} PUBLIC "-lutil")
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 
 target_include_directories(

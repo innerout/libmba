@@ -267,4 +267,3 @@ macro before including the msgno.h header or set it with a -DMSGNO compiler
 flag. 
 
 See README.win32 regarding Windows installation.
-
